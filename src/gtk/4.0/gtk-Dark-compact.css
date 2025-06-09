@@ -2715,7 +2715,7 @@ tabbar tabbox tab:checked, notebook > header tab:checked, tabbar tabbox tab:sele
 }
 
 tabbar tabbox tab:checked, notebook > header tab:checked, notebook > header tab:checked:hover, tabbar tabbox tab:selected, notebook > header tab:selected, notebook > header tab:selected:hover {
-  background-color: #2B2B2B;
+  background-color: #333333;
 }
 
 tabbar tabbox tab:checked:disabled, notebook > header tab:checked:disabled, tabbar tabbox tab:selected:disabled, notebook > header tab:selected:disabled {
@@ -2731,7 +2731,7 @@ frame > paned > notebook > header, notebook.frame > header {
 }
 
 notebook, notebook.frame {
-  background-color: #2B2B2B;
+  background-color: #333333;
   border-radius: 2px;
 }
 
@@ -3991,7 +3991,7 @@ stacksidebar separator.horizontal, button.font separator, button.file separator 
 listview,
 list {
   border-color: rgba(255, 255, 255, 0.12);
-  background-color: #2B2B2B;
+  background-color: #333333;
   color: white;
   box-shadow: none;
 }
@@ -7845,6 +7845,15 @@ these are pretty self explicative */
 @define-color warning_color #FDD633;
 @define-color error_color #F28B82;
 @define-color success_color #81C995;
+@define-color destructive_color #F28B82;
+@define-color warning_bg_color #FDD633;
+@define-color error_bg_color #F28B82;
+@define-color success_bg_color #81C995;
+@define-color destructive_bg_color #F28B82;
+@define-color warning_fg_color rgba(0, 0, 0, 0.87);
+@define-color error_fg_color rgba(0, 0, 0, 0.87);
+@define-color success_fg_color rgba(0, 0, 0, 0.87);
+@define-color destructive_fg_color rgba(0, 0, 0, 0.87);
 /*
 these colors are exported for the window manager and shouldn't be used in applications,
 read if you used those and something break with a version upgrade you're on your own... */
@@ -7856,6 +7865,65 @@ read if you used those and something break with a version upgrade you're on your
 @define-color wm_unfocused_bg #2C2C2C;
 @define-color wm_button_close_hover_bg #E57373;
 @define-color wm_button_close_active_bg #E53935;
+/*
+important/interactive/active widget accent colors */
+@define-color accent_color #3281EA;
+@define-color accent_bg_color #3281EA;
+@define-color accent_fg_color white;
+/*
+window colors */
+@define-color window_bg_color #333333;
+@define-color window_fg_color white;
+/*
+text field colors */
+@define-color view_bg_color #2B2B2B;
+@define-color view_fg_color white;
+/*
+headerbar colors */
+@define-color headerbar_bg_color #202020;
+@define-color headerbar_fg_color white;
+@define-color headerbar_border_color rgba(255, 255, 255, 0.12);
+@define-color headerbar_backdrop_color #2C2C2C;
+@define-color headerbar_shade_color #111111;
+@define-color headerbar_darker_shade_color #010101;
+/*
+sidebar colors */
+@define-color sidebar_bg_color #2B2B2B;
+@define-color sidebar_fg_color white;
+@define-color sidebar_backdrop_color #303030;
+@define-color sidebar_border_color rgba(255, 255, 255, 0.12);
+@define-color sidebar_shade_color #1c1c1c;
+/*
+secondary sidebar colors, needed in case app has two sidebars */
+@define-color secondary_sidebar_bg_color #303030;
+@define-color secondary_sidebar_fg_color white;
+@define-color secondary_sidebar_backdrop_color #262626;
+@define-color secondary_sidebar_border_color rgba(255, 255, 255, 0.12);
+@define-color secondary_sidebar_shade_color #1c1c1c;
+/*
+card and boxes list colors */
+@define-color card_bg_color #2B2B2B;
+@define-color card_fg_color white;
+@define-color card_shade_color #1c1c1c;
+/*
+tab overview colors */
+@define-color thumbnail_bg_color #303030;
+@define-color thumbnail_fg_color white;
+/*
+dialog colors */
+@define-color dialog_bg_color #2B2B2B;
+@define-color dialog_fg_color white;
+/*
+three dots menu colors */
+@define-color popover_bg_color #2B2B2B;
+@define-color popover_fg_color white;
+@define-color popover_shade_color #1c1c1c;
+/*
+scroll undershoot and transition color */
+@define-color shade_color rgba(0, 0, 0, 0.06);
+/*
+scroll bar outine color */
+@define-color scrollbar_outline_color rgba(255, 255, 255, 0.1);
 /*
 FIXME this is really an API */
 @define-color content_view_bg #2B2B2B;
