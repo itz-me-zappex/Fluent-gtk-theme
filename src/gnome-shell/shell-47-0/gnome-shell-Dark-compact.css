@@ -1793,6 +1793,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   color: #FF6D00;
 }
 
+.prompt-dialog-info-label {
+  color: #3281ea;
+  background-color: rgba(255, 255, 255, 0);
+}
+
 /* Polkit Dialog */
 .polkit-dialog-user-layout {
   text-align: center;
