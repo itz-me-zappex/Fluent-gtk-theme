@@ -87,8 +87,8 @@
   @if ($variant == 'light' and $topbar == 'light' and $state=='backdrop' and $blur == 'true') { @return #FCFCFC; }
   @if ($variant == 'light' and $topbar == 'dark' and $state=='normal') { @return #2C2C2C; }
   @if ($variant == 'light' and $topbar == 'dark' and $state=='backdrop') { @return #3c3c3c; }
-  @if ($variant == 'dark' and $state=='normal') { @return #202020; }
-  @if ($variant == 'dark' and $state=='backdrop') { @return #2C2C2C; }
+  @if ($variant == 'dark' and $state=='normal') { @return #070707; }
+  @if ($variant == 'dark' and $state=='backdrop') { @return #111111; }
 }
 
 //
@@ -98,32 +98,32 @@ $primary:                               theme(color);
 $entry-highlight:                       lighten($primary, 25%);
 $drop_target_color:                     #FF7043;
 
-$background:                            if($variant == 'light', #F2F2F2, #333333);
-$surface:                               if($variant == 'light', #FFFFFF, #3C3C3C);
-$base:                                  if($variant == 'light', #FFFFFF, #2B2B2B); // semi-surface with 1dp elevation
-$base-alt:                              if($variant == 'light', #FAFAFA, #303030);
+$background:                            if($variant == 'light', #F2F2F2, #111111);
+$surface:                               if($variant == 'light', #FFFFFF, #0a0a0a);
+$base:                                  if($variant == 'light', #FFFFFF, #121212); // semi-surface with 1dp elevation
+$base-alt:                              if($variant == 'light', #FAFAFA, #131313);
 
 $scrim:                                 rgba(black, 0.6);
 $scrim-alt:                             rgba(black, 0.3);
 $scrim-inverse:                         rgba(white, 0.1);
 
 $menu:                                  if($opacity == 'default', rgba($surface, 0.98), $surface);
-$tooltip:                               rgba(#363636, 0.9);
+$tooltip:                               rgba(#111111, 0.9);
 $titlebar:                              titlebar(normal);
 $titlebar-backdrop:                     titlebar(backdrop);
-$panel:                                 if($topbar == 'light', rgba(#F7F7F7, 0.8), rgba(#1F1F1F, 0.8));
-$panel-solid:                           if($topbar == 'light', #F7F7F7, #1F1F1F); // for Unity panel which doesn't allow translucent colors
+$panel:                                 if($topbar == 'light', rgba(#F7F7F7, 0.8), rgba(#070707, 0.8));
+$panel-solid:                           if($topbar == 'light', #F7F7F7, #070707); // for Unity panel which doesn't allow translucent colors
 
 $blur_opacity:                          if($variant == 'light', 0.85, 0.5);
 
 @if $blur == 'true' {
-  $background:                          if($variant == 'light', rgba(#FFFFFF, $blur_opacity), rgba(#333333, $blur_opacity));
-  $surface:                             if($variant == 'light', rgba(#FFFFFF, $blur_opacity), rgba(#3C3C3C, $blur_opacity));
-  $base:                                if($variant == 'light', rgba(#FFFFFF, $blur_opacity), rgba(#2B2B2B, $blur_opacity)); // semi-surface with 1dp elevation
-  $base-alt:                            if($variant == 'light', rgba(#FAFAFA, $blur_opacity), rgba(#303030, $blur_opacity));
+  $background:                          if($variant == 'light', rgba(#FFFFFF, $blur_opacity), rgba(#111111, $blur_opacity));
+  $surface:                             if($variant == 'light', rgba(#FFFFFF, $blur_opacity), rgba(#0a0a0a, $blur_opacity));
+  $base:                                if($variant == 'light', rgba(#FFFFFF, $blur_opacity), rgba(#121212, $blur_opacity)); // semi-surface with 1dp elevation
+  $base-alt:                            if($variant == 'light', rgba(#FAFAFA, $blur_opacity), rgba(#131313, $blur_opacity));
   $titlebar:                            rgba(titlebar(normal), $blur_opacity);
   $titlebar-backdrop:                   rgba(titlebar(backdrop), $blur_opacity);
-  $panel:                               if($topbar == 'light', rgba(#F7F7F7, $blur_opacity), rgba(#1F1F1F, $blur_opacity));
+  $panel:                               if($topbar == 'light', rgba(#F7F7F7, $blur_opacity), rgba(#070707, $blur_opacity));
 }
 
 //
